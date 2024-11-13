@@ -1,0 +1,25 @@
+Be: n ∈ N, m ∈ N, maxp ∈ N[1..m], minp ∈ N[1..m], 
+    p ∈ N[1..n, 1..m]
+Ki: db ∈ N, pontsz ∈ N[1..db]
+Fv: kiesett : N -> L, kiesett(i) = VAN(j=1..m, p[i, j] < minp[j])
+Fv: osszpont : N -> N, osszpont(i) = SZUMMA(j=1..n, p[i, j])
+Ef: 1 <= n <= 100 and 1 <= m <= 100 and
+    ∀ i ∈ [1..m] : (1 <= maxp[i] <= 100 and 1 <= minp[i] <= maxp[i])
+    and ∀ i ∈ [1..n] : (∀ j ∈ [1..m] : (0 <= p[i, j] <= 100))
+Uf: (db, pontsz) = KIVÁLOGAT(i=1..n, kiesett(i), osszpont(i))
+    and maxp[1] >= 0 
+
+// Visszavezetés
+// kiválogatás - fő
+// e..u -X 1..n
+// T(i) -> kiesett(i)
+// f(i) -> osszpont(i)
+// y -> pontsz
+
+// eldöntés - kiesett
+// e..u -> 1..n
+// T(j) -> p[i, j] < minp[j]
+
+//összegzés - osszpont
+// e..u -> 1..n
+// f(j) -> p[i, j]
