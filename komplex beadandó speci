@@ -1,0 +1,30 @@
+https://progalap.elte.hu/specifikacio/?data=H4sIAAAAAAAAE3VSy2rCQBT9lcusEkg0SUkXQyMofVAsFkrroiaLxEzsRDOWJgpVhHbntp%2FhP3QX%2BiN%2BSe%2FkoQbawJ3cOffMPWcea5K%2BsjGP%2BNjP%2BFwQSnqMgoD9dgsDDZI6eZmX6fPIbLWEBjgmniv6nEIY1KQpLzPJCQMsXy8pJGzGJiwECgPQO0hzBeBXwQpXwYHL7kO3p8RO2Ru1RrEG3IPOIQcdTE91xVVEwYQLBy3iYBqGAb4ISyhpQPvtB5R%2BCsseGlAkFh%2BwpMB025DrpBDXIPbkxDZU1HpCLSUM5L6kyf7tMP%2B8u7%2FpPircsXC5drqJjgOKgDZYKrrFxa5ot2HI03TlL9mKZfkurcDo5wui%2FHsyWeY78Y4bOzYu6qzVWsiTkhIF8Cj7I%2FCnWsHIKgavJJA5y3fThkp9D3p52g0pjgfUkPr3ClxBNJKxNEsJHa1J6Gc%2BvhlB4cwVCQXbFUin8op1PGMDH4qNYWHI3PDqiomzk7COFck9P0ZRCQMKliumvOpslT8bvQg%2FYegAszeWLmYZoebG2%2FwClzLmgdcCAAA%3D
+
+Be: n ∈ N, m ∈ N, hom ∈ Z[1..n, 1..m]
+Ki: db ∈ N, ki ∈ N[1..db]
+Fv: meleged : N -> N,
+    meleged(i) = DARAB(j=1..n, hom[j, i] > hom[j, i - 1])
+Ef: 1 <= n <= 1000 and 1 <= m <= 1000 and ∀ i ∈ [1..n] : (∀ j ∈ [1..m] : (-50 <= hom[i, j] <= 50))
+Uf: (db, ki) = KIVÁLOGAT(i=2..m, meleged(i) >= (n / 2), i)
+
+// Visszavezetés
+
+// fő függvény - KIVÁLOGAT
+// e..u -> 2..m
+// T(i) -> meleged(i) >= (n / 2)
+// t(i) -> i
+
+// mellékfüggvény - meleged - DARAB
+// e..u -> i..n
+// T(i) -> hom[j, i] > hom[j, i - 1]
+
+n: 3
+m: 5
+hom:
+  - [10, 15, 12, 10, 10]
+  - [11, 11, 11, 11, 20]
+  - [12, 16, 16, 16, 20]
+db: 2
+ki:
+  - 2
+  - 5
