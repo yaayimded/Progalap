@@ -5,7 +5,8 @@ Ki: db ∈ N, ki ∈ N[1..db]
 Fv: meleged : N -> N,
     meleged(i) = DARAB(j=1..n, hom[j, i] > hom[j, i - 1])
 Ef: 1 <= n <= 1000 and 1 <= m <= 1000 and ∀ i ∈ [1..n] : (∀ j ∈ [1..m] : (-50 <= hom[i, j] <= 50))
-Uf: (db, ki) = KIVÁLOGAT(i=2..m, meleged(i) >= (n / 2), i)
+Uf: (db, ki) = KIVÁLOGAT(i=2..m, meleged(i) >= (n / 2), i) // itt a '/'-t átvinni a másik oldalra szorzásnak
+// tehát meleged(i) * 2 > n
 
 // Visszavezetés
 
