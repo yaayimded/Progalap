@@ -1,12 +1,10 @@
-https://progalap.elte.hu/specifikacio/?data=H4sIAAAAAAAAE3VSy2rCQBT9lcusEkg0SUkXQyMofVAsFkrroiaLxEzsRDOWJgpVhHbntp%2FhP3QX%2BiN%2BSe%2FkoQbawJ3cOffMPWcea5K%2BsjGP%2BNjP%2BFwQSnqMgoD9dgsDDZI6eZmX6fPIbLWEBjgmniv6nEIY1KQpLzPJCQMsXy8pJGzGJiwECgPQO0hzBeBXwQpXwYHL7kO3p8RO2Ru1RrEG3IPOIQcdTE91xVVEwYQLBy3iYBqGAb4ISyhpQPvtB5R%2BCsseGlAkFh%2BwpMB025DrpBDXIPbkxDZU1HpCLSUM5L6kyf7tMP%2B8u7%2FpPircsXC5drqJjgOKgDZYKrrFxa5ot2HI03TlL9mKZfkurcDo5wui%2FHsyWeY78Y4bOzYu6qzVWsiTkhIF8Cj7I%2FCnWsHIKgavJJA5y3fThkp9D3p52g0pjgfUkPr3ClxBNJKxNEsJHa1J6Gc%2BvhlB4cwVCQXbFUin8op1PGMDH4qNYWHI3PDqiomzk7COFck9P0ZRCQMKliumvOpslT8bvQg%2FYegAszeWLmYZoebG2%2FwClzLmgdcCAAA%3D
-
+https://progalap.elte.hu/specifikacio/?data=H4sIAAAAAAAAE3VSy26CQBT9lRtW0AACDV1MqommjzQ2NmmsizosQAY7KGNT0KSaJu3ObT%2FDf%2BiO9Ef8kt7hobIoyR3unHvmnjOPjZK%2BsgmP%2BMTP%2BEIoROkxAgL22y0MdEjq5GVRps9j2zSFDjgmHhV9TiAMatKMl5nkhAGWb1YEEjZnUxYCgQEYHaRRAfhVsMo1aMNV97HbU%2BN22Ru1xrEO3IPOIQcDbE%2Bj4joiYMNlGy3iYFuWBb4ISyhpQPvtJ5R%2BCsseGlAlFh%2BwpMAM15LrpBDXIfbkxLU01HpCLTUM5L6kyf7dKP%2B6f7jtDlXednC5Dg6cnW6kg7bQKy6lotWCEU%2FTtb9ia5blu7QCo99viPKf6XSV78Q7buvYtqgz01zKc5ICBTCUnRFo6qgCWuBoBSOrGLySQOY8380aKvUtGOVZN6Q4Hk9D6t8LoELRlYylWaqQ8UYJ%2FczHFyMInFOREHCpQDqRF2zgCVv4TFwMB0PmlldXbJydhHOsSO7FMYpKGBBwqJjxqrNT%2Flz0IvyEoQPM3li6nGcKsT%2B8jz89WcAP1QIAAA%3D%3D
 Be: n ∈ N, m ∈ N, hom ∈ Z[1..n, 1..m]
 Ki: db ∈ N, ki ∈ N[1..db]
 Fv: meleged : N -> N,
     meleged(i) = DARAB(j=1..n, hom[j, i] > hom[j, i - 1])
 Ef: 1 <= n <= 1000 and 1 <= m <= 1000 and ∀ i ∈ [1..n] : (∀ j ∈ [1..m] : (-50 <= hom[i, j] <= 50))
-Uf: (db, ki) = KIVÁLOGAT(i=2..m, meleged(i) >= (n / 2), i) // itt a '/'-t átvinni a másik oldalra szorzásnak
-// tehát meleged(i) * 2 > n
+Uf: (db, ki) = KIVÁLOGAT(i=2..m, 2 * meleged(i) >= n, i)
 
 // Visszavezetés
 
